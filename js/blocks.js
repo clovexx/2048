@@ -25,9 +25,9 @@ class Blocks {
 
   initBlocks(count, levelRange = [1, 2]) {
     for (let i = 0; i < count; i++) {
-      let x = rondomBetweenNumbers(1, this.horizontalCellCount + 1, true),
-          y = rondomBetweenNumbers(1, this.verticalCellCount + 1, true),
-          level = rondomBetweenNumbers(levelRange[0], levelRange[1], true)
+      let x = randomBetweenNumbers(1, this.horizontalCellCount + 1, true),
+          y = randomBetweenNumbers(1, this.verticalCellCount + 1, true),
+          level = randomBetweenNumbers(levelRange[0], levelRange[1], true)
           
       if (!this.detectHasBlock(x, y)) {
         const block = this.initBlock(x, y, level)
