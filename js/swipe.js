@@ -164,4 +164,4 @@
         return defaultValue;
     }
 
-}(window, document));vvv
+}(window, document));
