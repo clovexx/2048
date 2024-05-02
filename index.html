@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>2048</title>
   <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
@@ -30,6 +29,14 @@
       overscroll-behavior: none;
     }
   </style>
+
+  <script>
+    if (detectMob()){
+      document.viewport.setAttribute('content', 'width=1024, initial-scale=0.1, user-scalable=no');
+    } else {
+      document.viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=no')
+    }
+  </script>
 
 </body>
 </html>
