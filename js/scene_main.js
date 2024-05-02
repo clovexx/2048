@@ -79,7 +79,7 @@ class SceneMain extends Scene {
       }
     }, false)
 
-    document.addEventListener("swiped", (e) => {
+    document.addEventListener('swiped', (e) => {
       switch(e.detail.dir) {
         case "left":
           this.box.blocks.active = false
