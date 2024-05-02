@@ -8,6 +8,7 @@ class SceneMain extends Scene {
     this.currentMoveDirect = null;
   }
 
+
   eventChange() {
     document.addEventListener('keyup', (e) => {
       switch(e.keyCode) {
@@ -71,6 +72,71 @@ class SceneMain extends Scene {
           }
         }
         break
+      }
+    }, false)
+
+    document.addEventListener("swiped", (e) => {
+      switch(e.detail.dir) {
+        case "left":
+          this.box.blocks.active = false
+          this.box.blocks.blocksDataRefresh()
+          this.box.blocks.moveLeft()
+          if (this.box.blocks.detectGameEnd()) {
+            alert('game over')
+          }
+          if (this.box.blocks.active) {
+            if (this.score.score <= 24) {
+              this.box.blocks.initBlocks(1)
+            } else {
+              this.box.blocks.initBlocks(1, [1, 3])
+            }
+          }
+          break
+        case "up":
+          this.box.blocks.active = false
+          this.box.blocks.blocksDataRefresh()
+          this.box.blocks.moveUp()
+          if (this.box.blocks.detectGameEnd()) {
+            alert('game over')
+          }
+          if (this.box.blocks.active) {
+            if (this.score.score <= 24) {
+              this.box.blocks.initBlocks(1)
+            } else {
+              this.box.blocks.initBlocks(1, [1, 3])
+            }
+          }
+          break
+        case "right":
+          this.box.blocks.active = false
+          this.box.blocks.blocksDataRefresh()
+          this.box.blocks.moveRight()
+          if (this.box.blocks.detectGameEnd()) {
+            alert('game over')
+          }
+          if (this.box.blocks.active) {
+            if (this.score.score <= 24) {
+              this.box.blocks.initBlocks(1)
+            } else {
+              this.box.blocks.initBlocks(1, [1, 3])
+            }
+          }
+          break
+        case "down":
+          this.box.blocks.active = false
+          this.box.blocks.blocksDataRefresh()
+          this.box.blocks.moveDown()
+          if (this.box.blocks.detectGameEnd()) {
+            alert('game over')
+          }
+          if (this.box.blocks.active) {
+            if (this.score.score <= 24) {
+              this.box.blocks.initBlocks(1)
+            } else {
+              this.box.blocks.initBlocks(1, [1, 3])
+            }
+          }
+          break
       }
     }, false)
   }
