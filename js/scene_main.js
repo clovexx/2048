@@ -18,6 +18,7 @@ class SceneMain extends Scene {
         this.box.blocks.moveLeft()
         if (this.box.blocks.detectGameEnd()) {
           alert('game over')
+          location.reload()
         }
         if (this.box.blocks.active) {
           if (this.score.score <= 24) {
@@ -33,6 +34,7 @@ class SceneMain extends Scene {
         this.box.blocks.moveUp()
         if (this.box.blocks.detectGameEnd()) {
           alert('game over')
+          location.reload()
         }
         if (this.box.blocks.active) {
           if (this.score.score <= 24) {
@@ -48,6 +50,7 @@ class SceneMain extends Scene {
         this.box.blocks.moveRight()
         if (this.box.blocks.detectGameEnd()) {
           alert('game over')
+          location.reload()
         }
         if (this.box.blocks.active) {
           if (this.score.score <= 24) {
@@ -63,6 +66,7 @@ class SceneMain extends Scene {
         this.box.blocks.moveDown()
         if (this.box.blocks.detectGameEnd()) {
           alert('game over')
+          location.reload()
         }
         if (this.box.blocks.active) {
           if (this.score.score <= 24) {
